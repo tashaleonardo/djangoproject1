@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #ffd6e7, #c2f0ff, #ffd6f4);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 30px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(255, 182, 193, 0.4);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    width: 350px;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+}
+
+h2 {
+    margin-bottom: 25px;
+    color: #ff6b9d;
+    font-size: 28px;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #ff85a2;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 0 10px rgba(255, 182, 193, 0.3);
+    color: #ff6b9d;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: inset 0 0 15px rgba(255, 182, 193, 0.5), 0 0 10px rgba(255, 182, 193, 0.3);
+    transform: translateY(-2px);
+}
+
+input::placeholder {
+    color: #ffb6c1;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    background: linear-gradient(145deg, #ffb6c1, #ff9eb5);
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.4);
+    margin-top: 10px;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #ff9eb5, #ff85a2);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 182, 193, 0.6);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 10px rgba(255, 182, 193, 0.4);
+}
+
+.error {
+    color: #ff6b6b;
+    margin-top: 15px;
+    font-size: 14px;
+    min-height: 20px;
+}
+
+/* Floating bubbles */
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5);
+    z-index: 1;
+    animation: float 15s infinite ease-in-out;
+}
+
+.bubble-1 {
+    width: 80px;
+    height: 80px;
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.bubble-2 {
+    width: 120px;
+    height: 120px;
+    bottom: 15%;
+    right: 10%;
+    animation-delay: 3s;
+    animation-duration: 18s;
+}
+
+.bubble-3 {
+    width: 60px;
+    height: 60px;
+    top: 40%;
+    right: 15%;
+    animation-delay: 6s;
+    animation-duration: 12s;
+}
+
+.bubble-4 {
+    width: 100px;
+    height: 100px;
+    bottom: 25%;
+    left: 15%;
+    animation-delay: 9s;
+    animation-duration: 20s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+    25% {
+        transform: translateY(-20px) translateX(10px);
+    }
+    50% {
+        transform: translateY(0) translateX(20px);
+    }
+    75% {
+        transform: translateY(20px) translateX(10px);
+    }
+}
